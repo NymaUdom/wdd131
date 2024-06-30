@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Nigeria</title>
+    <link rel="stylesheet" href="css/place.css">
+</head>
+<body>
+    <header>
+        <h1>Visit Nigeria</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#cuisine">Cuisine</a></li>
+                <li><a href="#tips">Travel Tips</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="introduction" class="card">
+            <h2>Introduction</h2>
+            <picture>
+                <source srcset="images/hero-image.webp" type="image/webp">
+                <img src="images/hero-image.jpg" alt="Hero Image">
+            </picture>
+            <p>Welcome to Nigeria! This place is known for its rich cultural heritage, diverse landscapes, and vibrant cities.</p>
+        </section>
+        <section id="nigeria-image" class="card">
+            <h2>Image Depiction of Nigeria</h2>
+            <img src="images/nigeria.jpeg" alt="Depiction of Nigeria">
+        </section>
+        <section id="history" class="card">
+            <h2>History and Culture</h2>
+            <p>[History and cultural details]</p>
+        </section>
+        <section id="attractions" class="card">
+            <h2>Attractions and Landmarks</h2>
+            <p>[Details about attractions]</p>
+        </section>
+        <section id="cuisine" class="card">
+            <h2>Local Cuisine</h2>
+            <p>[Details about local food]</p>
+        </section>
+        <section id="tips" class="card">
+            <h2>Travel Tips</h2>
+            <p>[Travel tips and advice]</p>
+        </section>
+        <section id="weather" class="card">
+            <h2>Weather <span class="weather-emoticon">⛅</span></h2>
+            <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon">
+            <p id="weather-info">Loading current weather...</p>
+        </section>
+        <section id="contact" class="card">
+            <h2>Contact Information</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Visit Nigeria. All rights reserved.</p>
+    </footer>
+    <script src="js/place.js" defer></script>
+</body>
+</html>

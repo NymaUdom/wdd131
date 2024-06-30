@@ -1,9 +1,19 @@
-
+/* Define global CSS variables for color scheme */
+:root {
+    --primary-color: #008751; /* Nigerian flag green */
+    --secondary-color: #ffffff; /* Nigerian flag white */
+    --accent-color: #333333;
+    --background-color: #f0f0f0;
+    --nav-background: #915353;
+    --hover-background: #555;
+    --text-color: #000000;
+}
 
 /* General reset and typography */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
@@ -17,15 +27,15 @@ header, main, footer {
 
 /* Styling header */
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 10px 0;
 }
 
 /* Styling navigation */
 nav {
-    background-color: #915353;
+    background-color: var(--nav-background);
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -33,28 +43,28 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: var(--secondary-color);
     text-decoration: none;
     margin: 0 10px;
     padding: 5px 10px;
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: var(--hover-background);
     border-radius: 5px;
 }
 
 /* Styling footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 10px 0;
 }
 
 /* Adjusting image position and text wrapping */
 main .card {
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: 5px;
     padding: 20px;
     margin: 20px 0;
@@ -72,11 +82,36 @@ main .card p {
     margin-top: 0; /* Remove top margin from paragraphs */
 }
 
+/* Weather section with pseudo-element for the large view */
+#weather h2::after {
+    content: '⛅';
+    display: inline-block;
+    margin-left: 10px;
+}
+
 /* Media queries for responsive design */
 @media (max-width: 600px) {
     main .card {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .weather-icon {
+        display: block;
+    }
+
+    #weather h2::after {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .weather-icon {
+        display: none;
+    }
+
+    .weather-emoticon {
+        display: none;
     }
 }
